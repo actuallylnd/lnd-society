@@ -35,7 +35,8 @@ I converted esx society to ox lib, this is a pre-release version, it is possible
 
 # 7 
 
-![image](https://github.com/user-attachments/assets/d39e0e8b-6676-4daf-b588-0d4eac0a6238)
+![image](https://github.com/user-attachments/assets/5cc034ad-40f5-4b8e-9e32-fb84970d90d8)
+
 
 # 8 
 
