@@ -219,7 +219,7 @@ function OpenManageEmployeesMenu(society)
     lib.showContext('manage_employees_' .. society)
 end
 
-function OpenPromoteMenu(society, employee)
+function OpenManageMenu(society, employee)
     ESX.TriggerServerCallback('esx_society:getJob', function(job)
         local options = {}
 
@@ -282,16 +282,7 @@ function OpenEmployeeOptionsMenu(society, employee)
         description = _U('promote_employee_description'),
         icon = 'arrow-up',
         onSelect = function()
-            OpenPromoteMenu(society, employee)
-        end
-    })
-
-    table.insert(options, {
-        title = _U('demote_employee_title', employee.name),
-        description = _U('demote_employee_description'),
-        icon = 'arrow-down',
-        onSelect = function()
-            OpenDemoteMenu(society, employee)
+            OpenManageMenu(society, employee)
         end
     })
 
@@ -317,37 +308,6 @@ function FireEmployee(society, employee)
     ESX.TriggerServerCallback('esx_society:setJob', function()
         OpenEmployeeList(society)
     end, employee.identifier, 'unemployed', 0, 'fire')
-end
-
-function OpenDemoteMenu(society, employee)
-    ESX.TriggerServerCallback('esx_society:getJob', function(job)
-        local options = {}
-
-        for i = 1, #job.grades, 1 do
-            if job.grades[i].grade < employee.job.grade then
-                local gradeLabel = (job.grades[i].label == '' and job.label or job.grades[i].label)
-
-                table.insert(options, {
-                    title = gradeLabel,
-                    description = _U('demote_employee_description'),
-                    icon = 'arrow-down',
-                    onSelect = function()
-                        ESX.TriggerServerCallback('esx_society:setJob', function()
-                            OpenEmployeeList(society)
-                        end, employee.identifier, society, job.grades[i].grade, 'demote')
-                    end
-                })
-            end
-        end
-
-        lib.registerContext({
-            id = 'demote_employee_' .. employee.identifier,
-            title = _U('demote_employee_title', employee.name),
-            options = options
-        })
-
-        lib.showContext('demote_employee_' .. employee.identifier)
-    end, society)
 end
 
 function OpenRecruitMenu(society)

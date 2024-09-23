@@ -1,8 +1,8 @@
 Config = {}
 
-Config.Locale = 'en'
+Config.Locale = 'pl'
 Config.EnableESXIdentity = false
-Config.MaxSalary = 3500
+Config.MaxSalary = 2500
 
 Config.BossGrade = 'boss' 
 Config.Webhook = ''

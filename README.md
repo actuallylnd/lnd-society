@@ -4,9 +4,6 @@ I converted esx society to ox lib, this is a pre-release version, it is possible
 
 - ESX Society version *1.0.4*
 
-# [DISCORD](https://discord.gg/dEv6tm2epA)
-# [TEBEX](https://lnd-scripts.tebex.io/)
-
 # DISCORD LOGS
 ![image](https://github.com/user-attachments/assets/c1016590-2447-4ec1-897c-d7862cc57c00)
 
@@ -43,6 +40,12 @@ I converted esx society to ox lib, this is a pre-release version, it is possible
 # 8 
 
 ![image](https://github.com/user-attachments/assets/7cdf9cc6-102a-4bf0-9286-2990a16758cf)
+
+
+
+
+
+
 
 
 
