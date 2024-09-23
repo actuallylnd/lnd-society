@@ -42,10 +42,8 @@ I converted esx society to ox lib, this is a pre-release version, it is possible
 ![image](https://github.com/user-attachments/assets/7cdf9cc6-102a-4bf0-9286-2990a16758cf)
 
 
-
-
-
-
+[DISCORD](https://discord.gg/dEv6tm2epA)
+[TEBEX](https://lnd-scripts.tebex.io/)
 
 
 
