@@ -2,6 +2,8 @@
 
 I converted esx society to ox lib, this is a pre-release version, it is possible that some of the features of this society may not work, because I did not have the opportunity to check them all, if there are any errors, report them on my discord.
 
+- ESX Society version *1.0.4*
+
 # DISCORD LOGS
 ![image](https://github.com/user-attachments/assets/c1016590-2447-4ec1-897c-d7862cc57c00)
 
