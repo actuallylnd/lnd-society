@@ -5,7 +5,8 @@ I converted esx society to ox lib, this is a pre-release version, it is possible
 - ESX Society version *1.0*
 
 # DISCORD LOGS
-![image](https://github.com/user-attachments/assets/c1016590-2447-4ec1-897c-d7862cc57c00)
+![image](https://github.com/user-attachments/assets/037fcccb-6f67-47f3-96d1-34c44faef3ce)
+
 
 # PREVIEW
 
