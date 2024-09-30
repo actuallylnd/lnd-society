@@ -80,11 +80,7 @@ function OpenBossMenu(society, close, options)
 				icon = 'money-check-alt',
 				onSelect = function()
 					ESX.TriggerServerCallback('esx_society:getSocietyMoney', function(money)
-						lib.notify({
-							title = _U('balance'),
-							description = _U('balance_description', ESX.Math.GroupDigits(money)),
-							type = 'inform'
-						})
+						Config.Notification(_U('balance'), _U('balance_description', ESX.Math.GroupDigits(money)), 'inform')
 					end, society)
 				end
 			})
@@ -103,7 +99,7 @@ function OpenBossMenu(society, close, options)
 						if amount > 0 then
 							TriggerServerEvent('esx_society:withdrawMoney', society, amount)
 						else
-							lib.notify({ description = _U('invalid_amount'), type = 'error' })
+							Config.Notification(nil ,_U('invalid_amount'),'error')
 						end
 					end
 				end
@@ -124,7 +120,8 @@ function OpenBossMenu(society, close, options)
 							if amount > 0 then
 								TriggerServerEvent('esx_society:depositMoney', society, amount)
 							else
-								lib.notify({ description = _U('invalid_amount'), type = 'error' }) 
+                                
+								Config.Notification(nil, _U('invalid_amount'),'error') 
 							end
 						end
 					end
@@ -146,7 +143,7 @@ function OpenBossMenu(society, close, options)
 							if amount > 0 then
 								TriggerServerEvent('esx_society:washMoney', society, amount)
 							else
-								lib.notify({ description = _U('invalid_amount'), type = 'error' })
+								Config.Notification(nil,_U('invalid_amount'), 'error' )
 							end
 						end
 					end
@@ -347,10 +344,8 @@ function OpenRecruitConfirmMenu(society, player)
                 description = _U('hire_description'),
                 icon = 'check',
                 onSelect = function()
-                    TriggerClientEvent('ox_lib:notify', player.source, {
-                        type = 'success',
-                        description = _U('you_have_hired', player.name)
-                    })
+
+                    Config.Notification(nil, _U('you_have_hired', player.name), 'success')
 
                     ESX.TriggerServerCallback('esx_society:setJob', function()
                         OpenRecruitMenu(society)
@@ -393,17 +388,17 @@ function OpenManageGradesMenu(society)
                         if salary <= Config.MaxSalary then
                             ESX.TriggerServerCallback('esx_society:setJobSalary', function(success)
                                 if success ~= nil then
-                                    lib.notify({ description = _U('salary_updated'), type = 'success' })
+                                    Config.Notification(nil, _U('salary_set_error'), 'error')
                                     OpenManageGradesMenu(society)
                                 else
-                                    lib.notify({ description = _U('salary_set_error'), type = 'error' })
+                                    Config.Notification(nil, _U('salary_updated'), 'success')
                                 end
                             end, society, job.grades[i].grade, salary)
                         else
-                            lib.notify({ description = _U('invalid_amount_max'), type = 'error' })
+                            Config.Notification(nil, _U('invalid_amount_max'),'error' )
                         end
                     else
-                        lib.notify({ description = _U('invalid_amount'), type = 'error' })
+                        Config.Notification(nil, _U('invalid_amount'), 'error' )
                     end
                 end
             })

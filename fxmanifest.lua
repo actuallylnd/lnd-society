@@ -2,10 +2,9 @@ fx_version 'adamant'
 
 game 'gta5'
 
-description 'ESX Society converted by lnd'
-version '1.0.0'
-
+description 'ESX Society converted by lnd | support: https://discord.gg/dEv6tm2epA'
 lua54 'yes'
+version '1.0'
 
 shared_scripts {
     '@es_extended/imports.lua',
@@ -13,18 +12,16 @@ shared_scripts {
 }
 
 server_scripts {
-    '@mysql-async/lib/MySQL.lua',
+    '@oxmysql/lib/MySQL.lua',
     '@es_extended/locale.lua',
-    'locales/en.lua',
-    'locales/pl.lua',
+    'locales/*.lua',
     'config.lua',
     'server/main.lua'
 }
 
 client_scripts {
     '@es_extended/locale.lua',
-    'locales/en.lua',
-    'locales/pl.lua',
+    'locales/*.lua',
     'config.lua',
     'client/main.lua'
 }
