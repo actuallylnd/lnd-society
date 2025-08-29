@@ -1,6 +1,6 @@
 # lnd-society / converted esx_society
 
-I converted esx society to ox lib, this is a pre-release version, it is possible that some of the features of this society may not work, because I did not have the opportunity to check them all, if there are any errors, report them on my discord.
+I converted esx society to ox lib, this is a pre-release version, it is possible that some of the features of this society may not work, because I did not have the opportunity to check them all.
 
 - ESX Society version *1.0*
 
